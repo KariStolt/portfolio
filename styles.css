@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-:root {
-  --primary-color: #3a4052;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   font-family: "Audiowide", cursive;
   line-height: 1.5;
 }
@@ -34,8 +33,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--primary-color) url("bg-image.png") no-repeat
-    center center/cover;
 }
 
 h1 {
@@ -50,14 +47,14 @@ h2 {
 }
 
 .c64-screen {
-  background-color: #3733A6;
-  font-family: 'Press Start 2P', cursive;
+  background-color: #3733a6;
+  font-family: "Press Start 2P", cursive;
   padding: 64px;
   height: 100vh;
   width: 100vw;
   background-clip: content-box;
   text-transform: uppercase;
-  color: #7C71D7;
+  color: #7c71d7;
 }
 .item {
   margin: 30px;
@@ -65,7 +62,7 @@ h2 {
 
 .c64-button {
   background-color: #3733a6;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   border: none;
   color: white;
   padding: 5px 15px;
@@ -81,11 +78,12 @@ h2 {
   color: white;
 }
 
-.c64-screen a, h2{
-  color: #7C71D7;
+.c64-screen a,
+h2 {
+  color: #7c71d7;
 }
 .bg-body {
-  background-color: #7C71D7;
+  background-color: #7c71d7;
 }
 
 .center {
@@ -109,7 +107,7 @@ h2 {
   height: 100vh;
   width: 100vw;
   background-clip: content-box;
-  color: #7C71D7;
+  color: #7c71d7;
 }
 span.skills {
   display: inline-block;
@@ -174,9 +172,63 @@ span.contacts li {
   opacity: 0.7;
 }
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .column {
     width: 100%;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-page {
+    background: #0f0e2e !important;
+    height: 100%;
+  }
+  .c64-screen {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .bg-body {
+    height: 100%;
+  }
+  .bg-body h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .profile {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .about-content {
+    width: 100vh;
+    margin: 20px !important;
+  }
+  .center {
+    background: #0f0e2e !important;
+  }
+  span.contacts {
+    float: right;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-auto-flow: column;
+  }
+  span.contacts li {
+    float: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .center li {
+    list-style: none;
   }
 }
